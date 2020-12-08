@@ -21,6 +21,23 @@
 		<img src="../static/img/logo.png" alt="">
 	</div>
 	<div class="header-middle">
+		<div class="mobile">
+			<header class="header-nav">
+				<input class="menu-btn" type="checkbox" id="menu-btn" />
+				<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+				<div class="mobile-profile relative">
+					<a href="/sabad"><img src="../static/img/Group.png" alt=""><span class="badge">۴۹</span></a>
+					<a href="/SMP"><img src="../static/img/user.png" alt=""></a>
+				</div>
+
+				<ul class="menu">
+					<li><a href="#work">Our Work</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#careers">Careers</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</header>
+		</div>
 		<div class="right-nav"><nav>
 			<ul>
 				<li><a href="/about">درباره ما</a></li>
@@ -29,12 +46,14 @@
 				<li><a href="" class="active">خانه</a></li>
 			</ul>
 		</nav></div>
-		<div class="left-nav"><nav>
+		<div class="left-nav">
+			<nav>
 			<ul>
-				<li><a href="/sabad">سبد درس <img src="../static/img/Group.png" alt=""><span class="badge">۲۲</span></a></li>
-				<li><a href="/SMP">ورود-ثبت نام<img src="../static/img/user.png" alt=""></a></li>
+				<li><a href="/sabad"><span>سبد درس</span> <img src="../static/img/Group.png" alt=""><span class="badge">۲</span></a></li>
+				<li><a href="/SMP"><span>ورود-ثبت نام</span><img src="../static/img/user.png" alt=""></a></li>
 			</ul>
-		</nav></div>
+		</nav>
+		</div>
 	</div>
 	<div class="header-bottom">
 		<div class="container">
@@ -86,44 +105,48 @@
  <div class="content-new">
 	 <h3 class="texth3 content-title"> <span class="black">جدید ترین</span>  آموزش‌ها<div></div> </h3>
 	 <a href="">نمایش بیشتر</a>
+	 <div class="desktop-hide"></div>
 	 <div class="content-new-previews">
 		 <div class="quarter-width preview">
 			 <img src="../static/img/new-csharp-preview.png" alt="">
 			 <h2>آموزش یادگیری ماشین</h2>
 				 <h1>یادگیری ماشین</h1>
-				 <button type="submit" class="btn btn-new">خرید درس<span class="plus">+</span></button>
+				 <button type="submit" class="btn btn-new">خرید درس+</button>
 				 <span class="price new-price">رایگان</span>
 		 </div>
 		 <div class="quarter-width preview">
 			 <img src="../static/img/new-machine-preview.png" alt="">
 			 <h2>نامه نویسی پایتون</h2>
 			 <h1>آموزش نامه نویسی پایتون نویسی پایتون</h1>
-			 <button  onclick="py()" class="btn btn-new">خرید درس<span class="plus">+</span></button>
+			 <button  onclick="py()" class="btn btn-new">خرید درس+</button>
 			 <span class="price new-price">رایگان</span>
 		 </div>
 		 <div class="quarter-width preview">
 			 <img src="../static/img/new-matlabb-preview.png" alt="">
 			 <h2>آموزش نامه نویسی متلب</h2>
 			 <h1>نامه نویسی متلب</h1>
-			 <button class="btn btn-new">خرید درس<span class="plus">+</span></button>
+			 <button class="btn btn-new">خرید درس+</button>
 			 <span class="price new-price">رایگان</span>
 		 </div>
 		 <div class="quarter-width preview">
 			 <img src="../static/img/new-c++-preview.png" alt="">
 			 <h2>آموزش برنامه نویسی ++c</h2>
 			 <h1>برنامه نویسی ++c</h1>
-			 <button class="btn btn-new">خرید درس<span class="plus">+</span></button>
+			 <button class="btn btn-new">خرید درس+</button>
 			 <span class="price new-price">رایگان</span>
 		 </div>
 	 </div>
  </div>
  <div class="content-about-us">
 	 <h3 class="texth3 content-title"> <span class="black">درباره</span>  تیم ما<div></div> </h3>
-	 <img src="../static/img/home-about-us.png" alt="">
+	 <div class="desktop-hide"></div>
+	 <img class="content-about-us-img" src="../static/img/home-about-us.png" alt="">
 	 <p>شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
 		 تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
+		 تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
 	 </p>
-	 <div>
+	 <div class="mobile content-about-us-mobile-img" ><img  src="../static/img/mobile-content-about-us.png" alt=""></div>
+	 <div class="center">
 		 <button class="btn btn-more-info">اطلاعات بیشتر</button>
 	 </div>
 
@@ -131,28 +154,30 @@
  <div class="content-most-popular">
 	 <div class="one-fifth-width content-most-popular-right-section">
 			<h3>پرفروشترین‌ها</h3>
+		 <div><button class="btn show-all-btn">نمایش همه</button></div>
 			<img class="half-width" src="../static/img/book.png" alt="">
-			<div><button class="btn show-all-btn">نمایش همه</button></div>
 		</div>
-	 <div class="one-fifth-width preview">
+	 <div class="first one-fifth-width preview">
 		 <img src="../static/img/popular-c++-preview.png" alt="">
 		 <h1>برنامه نویسی ++c</h1>
-		 <button class="btn btn-popular">خرید درس<span class="plus">+</span></button>
+		 <button class="btn btn-popular">خرید درس+</button>
 		 <span class="price new-price">رایگان</span>
+	 </div>
+	 <div class="mobile show-all-btn-fix">
+		 <img src="../static/img/arrow.png" alt="">
 	 </div>
 	 <div class="one-fifth-width preview">
 		 <img src="../static/img/popular-matlabb-preview.png" alt="">
 		 <h1>برنامه نویسی متلب</h1>
-		 <button class="btn btn-popular">خرید درس<span class="plus">+</span></button>
+		 <button class="btn btn-popular">خرید درس+</button>
 		 <span class="price new-price">رایگان</span>
 	 </div>
 	 <div class="one-fifth-width preview">
 		 <img src="../static/img/popular-machine-preview.png" alt="">
 		 <h1>برنامه نویسی ماشین</h1>
-		 <button class="btn btn-popular">خرید درس<span class="plus">+</span></button>
+		 <button class="btn btn-popular">خرید درس+</button>
 		 <span class="price new-price">رایگان</span>
 	 </div>
-
  </div>
 </div>
 

@@ -1,0 +1,75 @@
+﻿{%load static%}
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/porsesh.css' %}">
+	<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+	<script src="{% static 'js/digitat_porsesh.js' %}"> </script>
+</head>
+
+<body>
+	<nav>
+		<label id="logo"> <img src="{% static 'img/Dig.png' %}" class="logo"> </label>
+		<ul>
+			<li><a href="#" class="active">تماس با ما</a></li>
+			<li><a href="/about">درباره ما</a></li>
+			<li><a href="/SMP">ثبت نام</a></li>
+			<li><a href="/">خانه</a></li>
+		</ul>
+		<label id="icon"> <img src="{% static 'img/menu.png' %}" class=""> </i> </label>
+	</nav>
+
+	<ul class="ultxt">
+		<li class="list2">
+			توجه !
+		</li>
+		<li class="listl">
+			<span class="spn">خواهشمند است در پر کردن فیلدها دقت فرمائید<span>
+		</li>
+		<li class="listl">
+			<span class="spn">برای پرسش های ضروری می توانید با شماره 04133104610 تماس حاصل فرمائید</span>
+		</li>
+		<li class="listl">
+			<span class="spn">آدرس شرکت: آذربایجان شرقی- تبریز- پاستور جدید- ساختمان مبین- طبقه 4- واحد 2 </span>
+		</li>
+		<li class="listl">
+			<span class="spn">در این بخش می توانید هر گونه سوال، نظر، انتقاد و پیشنهاد خود را مطرح بفرمائید</span>
+		</li>
+		<li class="listl">
+			<span class="spn">خواهشمند است تا حد امکان سوالات خود را در این بخش مطرح فرمائید. کارشناسان ما در اولین فرصت
+				پاسخگوی سوالات شما خواهند بود</span>
+		</li>
+		<li class="listl">
+			<span class="spn">پاسخ شما به ایمیل معرفی شده ارسال خواهد شد</span>
+		</li>
+	</ul>
+
+	<form id="form1"> {%csrf_token%}
+		<div class="element-table">
+			<div class="col">
+				<input type="text" id="nam" name="nam" class="txtstyle" placeholder="نام و نام خانوادگی">
+			</div>
+			<div class="col">
+				<input type="number" id="tel" name="tel" class="txtstyle" placeholder="تلفن همراه">
+			</div>
+			<div class="col">
+				<input type="text" id="ema" name="ema" class="txtstyle" placeholder="ایمیل">
+			</div>
+			<div class="col1">
+				<textarea type="" id="porsesh" name="porsesh" class="txtstyle1" placeholder="پرسش، نظر، انتقاد یا پیشنهاد خود را وارد فرمائید "></textarea>
+			</div>
+		</div>
+		<div class="tbl-btn">
+			<div class="colbtn">
+				<input type="submit" value="ثبت پرسش" class="btn" onclick="sbm()" />
+			</div>
+		</div>
+	</form>
+
+	<footer class="footer">
+		<div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
+	</footer>
+</html>

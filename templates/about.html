@@ -1,0 +1,64 @@
+{%load static%}
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/about_style.css'%}">
+	<script src="{% static 'js/jquery-3.4.1.js'%}"></script>
+	<script>
+	 $(document).ready(function(){
+		$('#icon').click(function(){
+			$('ul').toggleClass('show');
+		});
+	 });
+	</script>
+</head>
+<body>
+    <nav>
+        <label id="logo"> <img src="{% static 'img/Dig.png'%}" class="logo"> </label>
+		<ul>
+			<li><a href="/contact">تماس با ما</a></li>
+			<li><a href="#" class="active">درباره ما</a></li>
+			<li><a href="/SMP">ثبت نام</a></li>
+			<li><a href="/">خانه</a></li>
+		</ul>
+		<label id="icon"> <img src="{% static 'img/menu.png'%}" class=""> </i> </label>
+	</nav>	
+	<div class="element-table">
+					شرکت دیجیتال تراکنش تبریز در سال 99 و با هدف فراهم سازی محتوی های با کیفیت دیجیتال و فعالیت در زمینه تجارت الکترونیک کار خود را آغاز کرده است. بنیانگذاران این موسسه، آقایان دکتر کریم عباسی و دکتر یوسف مسعودی سبحان زاده می باشند.
+	</div>
+	<div class="element-table">
+		<table class="table">
+			<tr>
+				<td>
+					<img src="{%static 'img/KA.jpg'%}" class="img">
+				</td>
+				<td class="td">
+					دکتر کریم عباسی فارغ التحصیل رشته بیوانفورماتیک از دانشگاه تهران هستند. ایشان در رساله دکتری خود بر روی مسئله پیش بینی تعامل پروتئین- دارو در حضور تعداد داده های کم با استفاده از تکنیک های یادگیری عمیق و یادگیری انتقالی تمرکز نموده اند. در این راستا مقالاتی در معتبرترین ژورنال های حوزه بیوانفورماتیک چاپ نموده اند. هم اکنون ایشان بر روی مسئله جدیدی در حوزه طراحی دارو با پروفسور Antti Poso از دانشگاه University of Eastern Finland  فنلاند همکاری دارند. همچنین ایشان به عنوان همکار اصلی، چندین طرح پژوهشی در موسسه پژوهش های بنیادی تهران (IPM) و صندوق حمایت از پژوهشگران و فناوران کشور نیز به انجام رسانده اند. 
+					<br><br>
+					<a class="alink" href="{%static 'resumes/Dr_Abbasi.pdf' %}"> برای مشاهده رزومه کامل ایشان کلیک نمائید. </a> <br>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="element-table">
+		<table class="table">
+			<tr>
+				<td>
+					<img src="{%static 'img/yms.jpg'%}" class="img">
+				</td>
+				<td class="td">
+					 دکتر یوسف مسعودی سبحان زاده فارغ التحصیل رشته بیوانفورماتیک از دانشگاه تهران هستند. رساله دکتری ایشان هدف یابی مجدد داروها با استفاده از تکنیک های داده کاوی بوده است و مقالات متعددی نیز در این زمینه منتشر کرده اند. ایشان بعد از فارغ التحصیل شدن، یک دوره پسا دکتری در دانشگاه تهران سپری کرده اند و هم اکنون بعنوان پژوهشگر با دانشگاه های علومی پزشکی تبریز و Mount Sinai آمریکا همکاری، و در این راستا در حوزه کشف نشان گرهای زیستی و یافتن داروهای مهار کننده آن ها فعالیت دارند. <br><br>
+					<a class="alink" href="{%static 'resumes/Dr_Masoudi.pdf' %}"> برای مشاهده رزومه کامل ایشان کلیک نمائید. </a> <br>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<br>
+	</div>
+	<footer class="footer">
+		<div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+{%load static%}
+{%static "dars" as BaseUrl1%}
+{%static "modares" as BaseUrl2%}
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/dars_style.css'%}">
+	<script src="{% static 'js/jquery-3.4.1.js'%}"></script>
+	<script>
+		$(document).ready(function () {
+			$('#icon').click(function () {
+				$('ul').toggleClass('show');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<nav>
+		<label id="logo"> <img src="{% static 'img/Dig.png'%}" class="logo"> </label>
+		<ul>
+			<li><a href="/contact">تماس با ما</a></li>
+			<li><a href="/about">درباره ما</a></li>
+			<li><a href="/SMP">ثبت نام</a></li>
+			<li><a href="/">خانه</a></li>
+		</ul>
+		<label id="icon"> <img src="{% static 'img/menu.png'%}"> </i> </label>
+	</nav>
+	<div class="element-table">
+		<div class="col">
+			<span><label class="lbl">{{dt.1}}</label></span>
+		</div>
+		<form id="form1" action="../../inssabad/{{dt.10}}/" method="POST">{%csrf_token%}
+			<div class="col">
+				<button type="submit" class="btn">افزودن به سبد</button>
+			</div>
+		</form>
+		<div class="col">
+			<form id="form2" action="../../sabad/" method="POST">{%csrf_token%}
+				<button type="submit" class="btn"> مشاهده سبد ({{cn}})</button>
+			</form>
+		</div>
+	</div>
+	<div class="element">
+		<div class="colinf">
+			تاریخ انتشار: {{dt.2}}
+		</div>
+		<div class="colinf">
+			مدت زمان: {{dt.3}}
+		</div>
+		<div class="colinf">
+			قیمت جلد: {{dt.4}} تومان
+		</div>
+		<div class="colinf">
+			تخفیف: {{dt.6}} تومان
+		</div>
+		<div class="colinff">
+			<label class="fnl"> قابل پرداخت: {{dt.5}} تومان</label>
+		</div>
+	</div>
+	<div class="element">
+		<table class="table">
+			<tr>
+				<td>
+					<img src="{{BaseUrl1}}/{{dt.8}}" class="img">
+				</td>
+				<td class="td">
+					<label class="inside">چکیده</label>
+					<br>
+					{{dt.7}}
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="element-table">
+		<div class="col">
+			<label class="lbl">مدرس</label>
+		</div>
+	</div>
+	<div class="element">
+		<table class="table">
+			<tr>
+				<td>
+					<img src="{{BaseUrl2}}/{{dt.9}}" class="img">
+				</td>
+				<td class="td">
+					<label class="inside">{{mdr.0}}</label>
+					<br>
+					{{mdr.1}}
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="element-table">
+		<div class="col">
+			<label class="lbl">سرفصل ها</label>
+		</div>
+	</div>
+
+	<div class="element">
+		<ul>
+			{%for d in sarfasl%}
+			<li class="list2"> {{d.1}} </li>
+			{%for dt in zirfasl%}
+			{%ifequal d.0 dt.0%}
+			<li class="listl">{{dt.1}}</li>
+			{%endifequal%}
+			{%endfor%}
+			<br>
+			{%endfor%}
+		</ul>
+	</div>
+
+	<footer class="footer">
+		<div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+{%load static%}
+<!DOCTYPE html>
+<html dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{% static 'css/rg_style.css' %}">
+	<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+	<script  src="{% static 'js/digitat_a.js' %}"> </script>
+</head>
+
+<body>
+    <nav>
+        <label id="logo"> <img src="{% static 'img/Dig.png' %}" class="logo"> </label>
+		<ul>
+			<li><a href="/contact">تماس با ما</a></li>
+			<li><a href="/about">درباره ما</a></li>
+			<li><a href="#" class="active">ثبت نام</a></li>
+			<li><a href="/">خانه</a></li>
+		</ul>
+		<label id="icon"> <img src="{% static 'img/menu.png' %}" class=""> </i> </label>
+	</nav>
+	
+        <ul class="ultxt">
+            <li class="list2">
+            نکات !
+            </li>
+			<li class="listl">
+              <span class="spn"> در کارنامه های دیجی تات، رتبه تقریبی شما در کنکور سازمان سنجش نیز درج خواهد شد<span>
+			</li>
+			<li class="listl">
+				<span class="spn">شرکت در دو آزمون اول کارشناسی ارشد رایگان می باشند<span>
+			</li>
+            <li class="listl">
+              <span class="spn"> آزمون های کارشناسی ارشد در تاریخ های، 5 دی، 10 بهمن، 15 اسفند، 20 فروردین، 10 اردیبهست و 24 اردیبهشت برگزار خواهند شد </span>
+			</li>
+            <li class="listl">
+              <span class="spn">  در صورت به تاخیر افتادن کنکور سازمان سنجش به علت شیوع ویروس کرونا آزمون های جامع بیشتری برگزار خواهند شد</span>
+			</li>
+			<li class="listl">
+                <span class="spn">خواهشمند است در صورت داشتن هرگونه سوال با کارشناسان آموزش به شماره 04133104610 تماس حاصل فرمائید</span>
+            </li>
+            <li class="listl">
+           <span class="spn"> پر کردن تمامی فیلد ها الزامی است</span>
+            </li>
+		</ul>
+		
+	<form id="form1"> {%csrf_token%}
+		<div>
+			<ul class="txtul">
+				<li class="list3"> 
+					مشخصات عمومی
+				</li>
+			</ul>
+		</div>
+		<div class="element-table">
+			<div class="col">
+				<input type="number" id="kodm" name="kod" class="txtstyle" placeholder="کدملی">
+			</div>
+			<div class="col">
+				<input type="text" id="nam" name="nam" class="txtstyle" placeholder="نام">
+			</div>
+			<div class="col">
+				<input type="text" id="namk" name="namk" class="txtstyle" placeholder="نام خانوادگی">
+			</div>
+			<div class="col">
+				<input type="number" id="shsh" name="shsh" class="txtstyle" placeholder=" شماره شناسنامه" />
+			</div>
+			<div class="col">
+				<input type="number" id="tel" name="tel" class="txtstyle" placeholder=" تلفن ثابت">
+			</div>
+			<div class="col">
+				<input type="number" id="mob" name="mob" class="txtstyle" placeholder="شماره موبایل">
+			</div>
+			 <div class="col">
+				<input type="email" id="ema" name="ema" class="txtstyle" placeholder=" ایمیل">
+			</div>
+			<div class="col">
+				<input class="txtstyle" id="shahr" name="shahr" list="dtshahr" placeholder="شهر">
+				<datalist id="dtshahr">
+					<option value="">-- شهر -- </option>
+					{%for dt in shahr%}
+						<option>{{dt.0}}</option>
+					{%endfor%}
+				</datalist>
+			</div>
+		</div>
+		<div>
+			<ul class="txtul">
+				<li class="list3"> 
+					 مشخصات تحصیلی
+				</li>
+			</ul>
+		</div>
+		<div class="element-table">
+			<div class="col">
+				<select class="slt" id="noedk" name ="noedk" onchange="get_namk()"> 
+					<option>--- نوع دانشگاه کارشناسی ---</option>
+					<option>دولتی</option>
+					<option>فنی و حرفه ای</option>
+					<option>پیام نور</option>
+					<option>آزاد اسلامی</option>
+					<option>غیر انتفاعی</option>
+					<option>علمی-کاربردی</option>
+					<option>پردیس</option>
+				</select>
+			</div>
+			 <div class="col">
+				<input class="txtstyle" id="namdk" name="namdk" list="ndk" placeholder="نام دانشگاه کارشناسی" >
+					<datalist id="ndk">
+					</datalist>
+			</div>
+			<div class="col">
+				<input class="txtstyle" id="reshtek" name="reshtek" list="dtrk" placeholder="رشته کارشناسی" onchange="get_gerayeshk()">
+				<datalist id="dtrk">
+					{%for dt in mr%}
+						<option>{{dt.1}}</option>
+					{%endfor%}
+				</datalist>
+			</div>
+			<div class="col">
+				<select class="slt" id="gerayeshk" name="gerayeshk">
+					<option>--- گرایش تحصیلی کارشناسی ---</option>	
+				</select>
+			</div>
+			<div class="col">
+				<input type="text" name="moadelk" id="moadelk" class="txtstyle" placeholder="معدل کارشناسی (مثال 16.22)">
+			</div>  
+		</div>
+			<div>
+				<ul class="txtul">
+					<li class="list3"> 
+						مشخصات ثبت نامی کارشناسی ارشد
+					</li>
+				</ul>
+			</div>
+		<div class="element-table">
+			<div class="col">
+				<select class="slt" name="goroh" id="goroh" onchange="get_majmoe()">
+					<option>--- گروه امتحانی ---</option>
+					{%for dt in goroh%}
+						<option>{{dt.0}}</option>
+					{%endfor%}
+				</select>
+			</div>
+			<div class="col">
+				<select class="slt" name="majmoe" id="majmoe" onchange="get_reshte()">
+					<option>--- مجموعه امتحانی ---</option>
+				</select>
+			</div>
+			<div class="col">
+
+				<select class="slt" name="remtahani" id="remtahani" onchange="get_gerayesh()">
+					<option>--- رشته امتحانی ---</option>
+				</select>
+			</div>
+			<div class="col">
+				<select class="slt" name="gemtahani" id="gemtahani">
+					<option>--- گرایش امتحانی ---</option>
+				</select>
+			</div> 
+		</div>
+		<div class="tbl-btn">
+			<div class="colbtn">
+				<input type="submit" value="ثبت نام" class="btn" onclick="sbm()"/>
+			</div>
+		</div>
+	</form>
+	
+    <footer class="footer">
+        <div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
+    </footer>
+	<table id="tbl1" style="display:none;">
+		{%for dt in goroh%}
+			<tr>
+				<td>{{dt.0}}</td>
+			</tr>
+		{%endfor%}
+	</table>
+	<table id="tbl2" style="display:none;">
+		{%for dt in gm%}
+			<tr>
+				<td>{{dt.0}}</td>
+				<td>{{dt.1}}</td>
+			</tr>
+		{%endfor%}
+	</table>
+	<table id="tbl3" style="display:none;">
+		{%for dt in mr%}
+			<tr>
+				<td>{{dt.0}}</td>
+				<td>{{dt.1}}</td>
+			</tr>
+		{%endfor%}
+	</table>
+	<table id="tbl4" style="display:none;">
+		{%for dt in rg%}
+			<tr>
+				<td>{{dt.0}}</td>
+				<td>{{dt.1}}</td>
+			</tr>
+		{%endfor%}
+	</table>
+	<table id="tbl5" style="display:none;">
+		{%for dt in daneshgah%}
+			<tr>
+				<td>{{dt.0}}</td>
+				<td>{{dt.1}}</td>
+			</tr>
+		{%endfor%}
+	</table>
+</body>
+</html>

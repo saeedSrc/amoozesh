@@ -1,0 +1,45 @@
+<!--{% load static%}-->
+
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/profile.css">
+    <script src="../static/js/jquery-3.4.1.js"></script>
+    <script src="../static/js/prf.js"></script>
+</head>
+
+<body>
+    <nav>
+        <label id="logo"> <img src="../static/img/Dig.png/" class="logo"> </label>
+        <ul>
+            <li><a href="/contact">تماس با ما</a></li>
+            <li><a href="/about">درباره ما</a></li>
+            <li><a href="/SMP">ثبت نام</a></li>
+            <li><a href="/">خانه</a></li>
+        </ul>
+        <label id="icon"> <img src="../static/img/menu.png"> </i> </label>
+    </nav>
+    <form id="form1">{%csrf_token%}
+        <div class="element-table">
+            <div class="col">
+                <img src="../static/img/user.jpg" class="user">
+                <input type="text" name="usr" id="usr" class="username" placeholder=" نام کاربری ">
+                <input type="password" name="pas" id="pas" class="password" placeholder=" رمز عبور">
+                <input type="submit" value="ورود" class="tbl-btn" onclick="lgn()"/>
+                {%if stl == "0" %}
+                <label class="lbl">{{rst}}</label>
+                <br>
+                {%endif%}
+                <a href=""> رمز عبور خود را فراموش کرده اید؟</a>
+            </div>
+        </div>
+    </form>
+    <footer class="footer">
+        <div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
+    </footer>
+</body>
+
+</html>

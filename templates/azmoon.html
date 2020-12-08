@@ -1,0 +1,146 @@
+{% load static%}
+{%static mgt as BaseUrl%}
+
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/azmoon.css' %}">
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'js/azmoon_script.js' %}"></script>
+</head>
+
+<body>
+    <form id="form1" method="POST" action="NXT">{%csrf_token%}
+        <table class="tbl" border="0">
+            <tr class="tbl-tr">
+                <td>
+                    <div class="element">
+                        <div class="col-im">
+                            <img src="{% static 'img/logo.png' %}">
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="element-table">
+                        <div class="col">
+                            <h5>کد ملی: {{kodm}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>نام و نام خانوادگی: {{nam}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>عنوان امتحانی: {{emt}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>مقطع امتحانی: {{magta}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>کد امتحانی: {{kod}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>تعداد سوال: {{tedad}}</h5>
+                        </div>
+                        <div class="col">
+                            <h5>زمان باقی مانده: <label id="lbl1">{{saat}}</label>:<label
+                                    id="lbl2">{{dagiga}}</label>:<label id="lbl3">{{sania}}</label></h5>
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="kodm" value="{{kodm}}">
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="nam" value="{{nam}}">
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="emt" value="{{emt}}">
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="magta" value="{{magta}}">
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="kod" value="{{kod}}">
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="ramz" value="{{ramz}}">
+                        </div>
+                        <div class="col" style="display: none;">
+                            <input type="text" name="tedad" id="tedad" value="{{tedad}}">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="onvan">
+            سوال {{sh}}: ({{onvan}})
+        </div>
+
+        <div class="pasokh">
+            <input type="number" class="tx" id="br" placeholder="برو به سوال">
+            <input type="submit" class="btn"  value="برو" onclick="boro()">
+            <input type="submit" class="btn"  value="خروج از آزمون" style="background-color:lightcoral;" onclick="khoroj()">
+        </div>
+
+        <div class="element-table_b">
+            <div class="col_b">
+                <img src="{{BaseUrl}}/{{soal}}" class="soal">
+            </div>
+        </div>
+
+        <div class="pasokh">
+            <input type="submit" class="btn" value="سوال بعدی" onclick="badi()">
+            <select class="gozineh" name="gozineh">
+                {%if psk == "0"%}
+                <option selected>--- پاسخ ---</option>
+                <option>گزینه 1</option>
+                <option>گزینه 2</option>
+                <option>گزینه 3</option>
+                <option>گزینه 4</option>
+                {%endif%}
+                {%if psk == "گزینه 1"%}
+                <option>--- پاسخ ---</option>
+                <option selected>گزینه 1</option>
+                <option>گزینه 2</option>
+                <option>گزینه 3</option>
+                <option>گزینه 4</option>
+                {%endif%}
+                {%if psk == "گزینه 2"%}
+                <option>--- پاسخ ---</option>
+                <option>گزینه 1</option>
+                <option selected>گزینه 2</option>
+                <option>گزینه 3</option>
+                <option>گزینه 4</option>
+                {%endif%}
+                {%if psk == "گزینه 3"%}
+                <option>--- پاسخ ---</option>
+                <option>گزینه 1</option>
+                <option>گزینه 2</option>
+                <option selected>گزینه 3</option>
+                <option>گزینه 4</option>
+                {%endif%}
+                {%if psk == "گزینه 4"%}
+                <option selected>--- پاسخ ---</option>
+                <option>گزینه 1</option>
+                <option>گزینه 2</option>
+                <option>گزینه 3</option>
+                <option selected>گزینه 4</option>
+                {%endif%}
+            </select>
+            <input type="submit" class="btn" value="سوال قبلی" onclick="gabli()">
+        </div>
+
+        <div class="col" style="display: none;">
+            <input type="text" name="sh" id="sh" value="{{sh}}">
+            <input type="text" name="cr" value="{{sh}}">
+        </div>
+    </form>
+
+
+    <footer class="footer">
+        <div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
+    </footer>
+</body>
+
+</html>

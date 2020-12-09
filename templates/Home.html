@@ -63,7 +63,8 @@
 			<!--{%csrf_token%}-->
 			<div class ="search-box-container">
 				<div class="search-box">
-					<input type="text" id="sear" name="sear" onfocus="this.placeholder = ''" placeholder="دوره یا آموزش مورد نظر را جست و جو نمایید..." class="search"  />
+					<input type="text" id="sear" name="sear"  placeholder="دوره یا آموزش مورد نظر را جست و جو نمایید..." class="search"  />
+					<img class="search-img" src="../static/img/search-img.png" alt="">
 					<button type="submit" class="btn btn-search" onclick="search()">جستجو</button>
 				</div>
 			</div>
@@ -140,15 +141,21 @@
  <div class="content-about-us">
 	 <h3 class="texth3 content-title"> <span class="black">درباره</span>  تیم ما<div></div> </h3>
 	 <div class="desktop-hide"></div>
+
 	 <img class="content-about-us-img" src="../static/img/home-about-us.png" alt="">
-	 <p>شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
-		 تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
-		 تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
-	 </p>
-	 <div class="mobile content-about-us-mobile-img" ><img  src="../static/img/mobile-content-about-us.png" alt=""></div>
-	 <div class="center">
-		 <button class="btn btn-more-info">اطلاعات بیشتر</button>
+	 <div class="content-about-us-box">
+		 <p>شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
+			 تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
+			 تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه تولید محتوا کار میکنه شرکت ما در زمینه ی تولید محتوا کار میکنه
+		 </p>
+		 <div class="center">
+			 <button class="btn btn-more-info">اطلاعات بیشتر</button>
+		 </div>
 	 </div>
+	 <div class="mobile content-about-us-mobile-img" ><img  src="../static/img/mobile-content-about-us.png" alt=""></div>
+	 <!--<div class="center">-->
+		 <!--<button class="btn btn-more-info">اطلاعات بیشتر</button>-->
+	 <!--</div>-->
 
  </div>
  <div class="content-most-popular">
@@ -160,7 +167,7 @@
 	 <div class="first one-fifth-width preview">
 		 <img src="../static/img/popular-c++-preview.png" alt="">
 		 <h1>برنامه نویسی ++c</h1>
-		 <button class="btn btn-popular">خرید درس+</button>
+		 <button class="btn btn-new">خرید درس+</button>
 		 <span class="price new-price">رایگان</span>
 	 </div>
 	 <div class="mobile show-all-btn-fix">
@@ -169,13 +176,13 @@
 	 <div class="one-fifth-width preview">
 		 <img src="../static/img/popular-matlabb-preview.png" alt="">
 		 <h1>برنامه نویسی متلب</h1>
-		 <button class="btn btn-popular">خرید درس+</button>
+		 <button class="btn btn-new">خرید درس+</button>
 		 <span class="price new-price">رایگان</span>
 	 </div>
 	 <div class="one-fifth-width preview">
 		 <img src="../static/img/popular-machine-preview.png" alt="">
 		 <h1>برنامه نویسی ماشین</h1>
-		 <button class="btn btn-popular">خرید درس+</button>
+		 <button class="btn btn-new">خرید درس+</button>
 		 <span class="price new-price">رایگان</span>
 	 </div>
  </div>
@@ -184,7 +191,8 @@
 <div class="footer">
 	<p>  با عضویت در خبرنامه‌ سایت دی جی تات <span class="red">تخفیفات</span> و <span class="red">آموزش های جدید</span> را از دست ندهید.</p>
 	<div class="email-box">
-			<input  type="text"   name="email" class="email" onfocus="this.placeholder = ''" placeholder="لطفا ایمیل خود را وارد نمایید..."   />
+			<input  type="text"   name="email" class="email"  placeholder="لطفا ایمیل خود را وارد نمایید..."   />
+		<img class="email-img" src="../static/img/email-img.png" alt="">
 			<button type="submit" class="btn email-btn">عضویت</button>
 		</div>
 	<p>دیجیتات را در شبکه‌های اجتماعی دنبال کنید.</p>

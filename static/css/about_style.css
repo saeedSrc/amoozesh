@@ -105,6 +105,10 @@
 /*=====mobile=====*/
 @media only screen and (max-width: 780px) {
 
+     .header-bottom {
+         display: none;
+     }
+
     .about-text-section {
         float: initial;
         width: 100%;
@@ -122,6 +126,8 @@
         width: 60%;
         margin: auto;
     }
+
+
 }
 
 /*=====mobile=====*/

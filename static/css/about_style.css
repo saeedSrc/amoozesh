@@ -1,9 +1,13 @@
+h2 {
+    text-align: right!important;
+}
+
 .about-content>* {
     font-family: iranyekanLight, serif!important;
 }
 
 .about-content {
-    padding: 0 3%;
+    padding: 3%;
     background: #ffffff;
 }
 
@@ -28,7 +32,7 @@
 }
 
 .about-img-section img {
-    width: 65%
+    width: 80%
 }
 
 .separator {
@@ -47,14 +51,14 @@
 }
 
 .about-text-section {
-    width: 65%;
+    width: 70%;
     margin-left: 5%;
     text-align: right;
     padding: 2% 0;
 }
 
 .about-img-section {
-    width: 30%;
+    width: 25%;
     text-align: right;
 
 }
@@ -96,10 +100,6 @@
 
 .teacher-name-title h3{
     direction: ltr;
-}
-
-.about-section-team-intro {
-    margin: 2% 0%;
 }
 
 /*=====mobile=====*/

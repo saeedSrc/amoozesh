@@ -47,6 +47,7 @@ h1 {
     direction: rtl;
     font-size: 1.5vw;
     font-style: normal;
+    text-align: center;
 }
 
 h2 {
@@ -54,6 +55,7 @@ h2 {
     font-style: normal;
     font-weight: bold;
     direction: rtl;
+    text-align: center;
 
 }
 
@@ -89,7 +91,9 @@ input {
     padding-right: 3vw;
 }
 
-input,
+label {
+    font-size: 1vw;
+}
 
 input:focus {
     outline-width: 0;
@@ -136,6 +140,14 @@ button:focus {
 
 .back-light-green-color  {
     color: #43CC8B;
+}
+
+.light-white-color {
+    color: #E5E5E5;
+}
+
+.back-light-white-color {
+    background: #E5E5E5;
 }
 .center {
     text-align: center;
@@ -415,7 +427,6 @@ nav li img {
 }
 
 .content {
-    /*padding: 5% 4%;*/
     background: #E5E5E5;
 }
 
@@ -935,7 +946,7 @@ nav li img {
         font-size: 2vw;
     }
 
-    h3 {
+    h3,label {
         font-size: 2vw;
     }
 

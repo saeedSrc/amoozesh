@@ -1,75 +1,87 @@
-﻿{%load static%}
+﻿<!--{%load static%}-->
 <!DOCTYPE html>
 <html dir="ltr">
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="{% static 'css/porsesh.css' %}">
-	<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
-	<script src="{% static 'js/digitat_porsesh.js' %}"> </script>
+	<!--<link rel="stylesheet" href="{% static 'css/porsesh.css' %}">-->
+	<!--<script src="{% static 'js/jquery-3.4.1.js' %}"></script>-->
+	<!--<script src="{% static 'js/digitat_porsesh.js' %}"> </script>-->
+	<link rel="stylesheet" href="../static/css/contact_style.css">
+	<script src="../static/js/jquery-3.4.1.js"></script>
+	<script>
+        $(document).ready(function(){
+            $('#header').load('header.html', function() {
+                $(".banner").attr('src', '../static/img/about-banner.jpg');
+                $("#form1").css('display', 'none');
+                var mainTitle = '<h1>تماس با ما ‌ما</h1>';
+                $(".main-title").html(mainTitle).css('top', '20%');
+                $(".container").css('height', '12vw');
+
+            });
+            $("#footer").load("footer.html");
+        });
+	</script>
 </head>
 
 <body>
-	<nav>
-		<label id="logo"> <img src="{% static 'img/Dig.png' %}" class="logo"> </label>
-		<ul>
-			<li><a href="#" class="active">تماس با ما</a></li>
-			<li><a href="/about">درباره ما</a></li>
-			<li><a href="/SMP">ثبت نام</a></li>
-			<li><a href="/">خانه</a></li>
-		</ul>
-		<label id="icon"> <img src="{% static 'img/menu.png' %}" class=""> </i> </label>
-	</nav>
-
-	<ul class="ultxt">
-		<li class="list2">
-			توجه !
-		</li>
-		<li class="listl">
-			<span class="spn">خواهشمند است در پر کردن فیلدها دقت فرمائید<span>
-		</li>
-		<li class="listl">
-			<span class="spn">برای پرسش های ضروری می توانید با شماره 04133104610 تماس حاصل فرمائید</span>
-		</li>
-		<li class="listl">
-			<span class="spn">آدرس شرکت: آذربایجان شرقی- تبریز- پاستور جدید- ساختمان مبین- طبقه 4- واحد 2 </span>
-		</li>
-		<li class="listl">
-			<span class="spn">در این بخش می توانید هر گونه سوال، نظر، انتقاد و پیشنهاد خود را مطرح بفرمائید</span>
-		</li>
-		<li class="listl">
-			<span class="spn">خواهشمند است تا حد امکان سوالات خود را در این بخش مطرح فرمائید. کارشناسان ما در اولین فرصت
-				پاسخگوی سوالات شما خواهند بود</span>
-		</li>
-		<li class="listl">
-			<span class="spn">پاسخ شما به ایمیل معرفی شده ارسال خواهد شد</span>
-		</li>
-	</ul>
-
-	<form id="form1"> {%csrf_token%}
-		<div class="element-table">
-			<div class="col">
-				<input type="text" id="nam" name="nam" class="txtstyle" placeholder="نام و نام خانوادگی">
-			</div>
-			<div class="col">
-				<input type="number" id="tel" name="tel" class="txtstyle" placeholder="تلفن همراه">
-			</div>
-			<div class="col">
-				<input type="text" id="ema" name="ema" class="txtstyle" placeholder="ایمیل">
-			</div>
-			<div class="col1">
-				<textarea type="" id="porsesh" name="porsesh" class="txtstyle1" placeholder="پرسش، نظر، انتقاد یا پیشنهاد خود را وارد فرمائید "></textarea>
-			</div>
+<div id="header"></div>
+<div class="contact-content">
+	<div class="contact-all-info">
+		<div class="contact-info">
+			<img src="../static/img/loc.png" alt="">
+			<h3>نشانی</h3>
+			<p class="gray-color">آذربایجان شرقی- تبریز- پاستور جدید- ساختمان مبین- طبقه 4- واحد 2</p>
 		</div>
-		<div class="tbl-btn">
-			<div class="colbtn">
-				<input type="submit" value="ثبت پرسش" class="btn" onclick="sbm()" />
-			</div>
+		<div class="contact-info">
+			<img src="../static/img/telephone.png" alt="">
+			<h3>شماره تماس</h3>
+			<p class="gray-color">آذربایجان شرقی- تبریز- پاستور جدید- ساختمان مبین- طبقه 4- واحد 2</p>
 		</div>
-	</form>
+		<div class="contact-info">
+			<img src="../static/img/email2.png" alt="">
+			<h3>آدرس ایمیل</h3>
+			<p class="gray-color">آذربایجان شرقی- تبریز- پاستور جدید- ساختمان مبین- طبقه 4- واحد 2</p>
+		</div>
+	</div>
+	<div class="contact-form">
+		<h1 class="violet-color">فرم ارسال پیام</h1>
+		 <br>
+		<form class="violet-color" action="/">
+		  <div class="form-group">
+				<label for="name">نام</label>
+				<br>
+				<input  type="text" id="name" name="name">
+			</div>
+          <div class="form-group">
+			  <label for="last-name">نام خانوادگی</label>
+			  <br>
+			  <input  type="text" id="last-name" name="last-name">
+		  </div>
+			<br> <br>
+          <div class="form-group">
+			  <label for="phone-number">تلفن همراه</label>
+			  <br>
+			  <input  type="number" id="phone-number" name="phone-number">
+		  </div>
+          <div class="form-group">
+			  <label for="email">ایمیل</label>
+			  <br>
+			  <input  type="email" id="email" name="email">
+		  </div>
+			<br><br>
+          <div class="form-group">
+			  <label for="message">متن پیام</label>
+			  <br>
+			  <textarea  id="message" name="message"></textarea>
+		  </div>
+			<br>
+			<button class="btn submit-btn" type="submit" value="Submit">ارسال</button>
+		</form>
+	</div>
+</div>
+<div id="footer"></div>
+</body>
 
-	<footer class="footer">
-		<div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
-	</footer>
 </html>

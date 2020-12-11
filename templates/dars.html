@@ -1,123 +1,125 @@
-{%load static%}
-{%static "dars" as BaseUrl1%}
-{%static "modares" as BaseUrl2%}
+<!--{%load static%}-->
+<!--{%static "dars" as BaseUrl1%}-->
+<!--{%static "modares" as BaseUrl2%}-->
 <!DOCTYPE html>
-<html dir="ltr">
+<html>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/dars_style.css'%}">
-	<script src="{% static 'js/jquery-3.4.1.js'%}"></script>
+	<!--<link rel="stylesheet" type="text/css" href="{% static 'css/dars_style.css'%}">-->
+	<!--<script src="{% static 'js/jquery-3.4.1.js'%}"></script>-->
+	<link rel="stylesheet" href="../static/css/dars_style.css">
+	<script src="../static/js/jquery-3.4.1.js"></script>
 	<script>
-		$(document).ready(function () {
-			$('#icon').click(function () {
-				$('ul').toggleClass('show');
-			});
-		});
+        $(document).ready(function(){
+            $('#header').load('header.html', function() {
+                $(".banner").attr('src', '../static/img/about-banner.jpg');
+                $("#form1").css('display', 'none');
+                var mainTitle = '<h1>دوره‌ی برنامه نویسی سی شارپ</h1>';
+                $(".main-title").html(mainTitle).css('top', '20%');
+                $(".container").css('height', '15vw');
+
+            });
+            $("#footer").load("footer.html");
+        });
 	</script>
 </head>
 
 <body>
-	<nav>
-		<label id="logo"> <img src="{% static 'img/Dig.png'%}" class="logo"> </label>
-		<ul>
-			<li><a href="/contact">تماس با ما</a></li>
-			<li><a href="/about">درباره ما</a></li>
-			<li><a href="/SMP">ثبت نام</a></li>
-			<li><a href="/">خانه</a></li>
-		</ul>
-		<label id="icon"> <img src="{% static 'img/menu.png'%}"> </i> </label>
-	</nav>
-	<div class="element-table">
-		<div class="col">
-			<span><label class="lbl">{{dt.1}}</label></span>
-		</div>
-		<form id="form1" action="../../inssabad/{{dt.10}}/" method="POST">{%csrf_token%}
-			<div class="col">
-				<button type="submit" class="btn">افزودن به سبد</button>
+<div id="header"></div>
+<div class="course-content">
+	<div class="course-info">
+		<div class="course-info-img">
+			<img class="back-course-img" src="../static/img/back-course.png" alt="">
+			<img class="group-course-img back-circle-large" src="../static/img/back-circle-large.png" alt="">
+			<img class="group-course-img" src="../static/img/csharp.png" alt="">
+			<div class="intro-course-teacher white-color">
+				<h1>آموزش زبان برنامه نویسی سی‌شارپ</h1>
+				<br>
+				<h1>مدرس : یوسف مسعودی</h1>
 			</div>
-		</form>
-		<div class="col">
-			<form id="form2" action="../../sabad/" method="POST">{%csrf_token%}
-				<button type="submit" class="btn"> مشاهده سبد ({{cn}})</button>
-			</form>
+			<div class="course-info-text">
+				<h2>اطلاعات دوره</h2>
+				<br>
+				<h2><span class="gray-color">مدت زمان دوره : &nbsp </span> سه ساعت ۱۱ دیقه</h2>
+				<br>
+				<h2><span class="gray-color">تاریخ انتشار: &nbsp </span> ۱۳۹۹/۰۸/۲۹</h2>
+			</div>
+			<div class="course-buy-button-section">
+				<div class="course-discount-section">
+					<div class="red-color">
+						<span class="">-۲٪ </span>
+						<span class="base-price gray-color">۴۴۰۰۰۰ </span>
+					</div>
+					<h1 class="final-price light-green-color">تومان۱۷۰۰۰۰ </h1>
+				</div>
+				<button class="btn buy-btn">خرید درس+</button>
+			</div>
 		</div>
 	</div>
-	<div class="element">
-		<div class="colinf">
-			تاریخ انتشار: {{dt.2}}
-		</div>
-		<div class="colinf">
-			مدت زمان: {{dt.3}}
-		</div>
-		<div class="colinf">
-			قیمت جلد: {{dt.4}} تومان
-		</div>
-		<div class="colinf">
-			تخفیف: {{dt.6}} تومان
-		</div>
-		<div class="colinff">
-			<label class="fnl"> قابل پرداخت: {{dt.5}} تومان</label>
-		</div>
+	<div class="course-summary center">
+		<nav>
+			<ul>
+				<li><a href="#">سرفصل‌های دوره</a></li>
+				<li><a class="active"href="/contact">مدرس دوره</a></li>
+				<li><a  href="/about">چکیده‌ی دوره</a></li>
+			</ul>
+		</nav>
+		<div class="separator"></div>
 	</div>
-	<div class="element">
-		<table class="table">
-			<tr>
-				<td>
-					<img src="{{BaseUrl1}}/{{dt.8}}" class="img">
-				</td>
-				<td class="td">
-					<label class="inside">چکیده</label>
-					<br>
-					{{dt.7}}
-				</td>
-			</tr>
-		</table>
+	<div class="summary-text-section">
+		<h2 class="light-blue-color">
+			چکیده‌ی دوره
+		</h2>
+		<p class="black-color">
+			پایتون یک زبان برنامه نویسی سطح بالا می باشد که ساختار آن بگونه ای بوده است
+			که عمومیت بسیاری در حوزه های مختلف پیدا کرده است
+			و بر روی انواع مختلف سیستم عامل ها نیز قابل اجرا است. از ویژگی های بارز این زبان برنامه نویسی
+			می توان به سهولت یادگیری و استفاده از آن اشاره کرد. کارائی این زبان برنامه نویسی تا جائی بوده است
+			که در حال حاضر بیشتر نرم افزارهای کارا و معروف مانند اینستاگرام، آمازون، فیسبوک، یاهو، گوگل و ...
+			بر اساس آن بنا شده اند. آموزش جاری می تواند برای تمامی رشته ها و افرادی که علاقه مند
+			به یادگیری برنامه نویسی و استفاده از پایتون در کارهای تحقیقاتی و توسعه برنامه های تحت وب و موبایل هستند مفید واقع شود.
+		</p>
 	</div>
-	<div class="element-table">
-		<div class="col">
-			<label class="lbl">مدرس</label>
-		</div>
+	<div class="summary-text-section">
+		<h2 class="light-blue-color">
+			مدرس دوره
+		</h2>
+		<p class="black-color">
+			دکتر یوسف مسعودی سبحان زاده دکتر یوسف مسعودی سبحان زاده فارغ التحصیل رشته بیوانفورماتیک
+			از دانشگاه تهران هستند. رساله دکتری ایشان هدف یابی مجدد داروها با استفاده
+			از تکنیک هایداده کاوی بوده است و مقالات متعددی نیز در این زمینه منتشر کرده اند
+			. ایشان بعد از فارغ التحصیل شدن، یک دوره پسا دکتری در دانشگاه تهران گذرانده اند
+			و هم اکنون بعنوان پژوهشگر با دانشگاه های علوم پزشکی تبریز و Mount Sinai آمریکا همکاری،
+			و در این راستا در حوزه کشف نشان گرهای زیستی و یافتن داروهای مهار کننده آن ها فعالیت دارند.
+		</p>
 	</div>
-	<div class="element">
-		<table class="table">
-			<tr>
-				<td>
-					<img src="{{BaseUrl2}}/{{dt.9}}" class="img">
-				</td>
-				<td class="td">
-					<label class="inside">{{mdr.0}}</label>
-					<br>
-					{{mdr.1}}
-				</td>
-			</tr>
-		</table>
-	</div>
+	<div class="separator"></div>
+	<div class="course-titles">
+		<h2 class="light-blue-color"> سرفصل‌های دوره</h2>
+		<h3 class="light-blue-color"><span class="back-light-blue-color white-color">۱</span>&nbspمقدمه‌ای بر پایتون</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspمعرفی</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspویژگی</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspکاربرد این زبان</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspاولین برنامه</h3>
 
-	<div class="element-table">
-		<div class="col">
-			<label class="lbl">سرفصل ها</label>
-		</div>
-	</div>
+		<h3 class="light-blue-color"><span class="back-light-blue-color white-color">۲</span>&nbspمتغییرها</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspمعرفی</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspویژگی</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspکاربرد این زبان</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspاولین برنامه</h3>
 
-	<div class="element">
-		<ul>
-			{%for d in sarfasl%}
-			<li class="list2"> {{d.1}} </li>
-			{%for dt in zirfasl%}
-			{%ifequal d.0 dt.0%}
-			<li class="listl">{{dt.1}}</li>
-			{%endifequal%}
-			{%endfor%}
-			<br>
-			{%endfor%}
-		</ul>
-	</div>
+		<h3 class="light-blue-color"><span class="back-light-blue-color white-color">۳</span>&nbspمتغییرها</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspمعرفی</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspویژگی</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspکاربرد این زبان</h3>
+		<h3><label class="back-light-blue-color white-color"></label>&nbspاولین برنامه</h3>
 
-	<footer class="footer">
-		<div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
-	</footer>
+	</div>
+</div>
+
+<div id="footer"></div>
 </body>
 
 </html>

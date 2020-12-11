@@ -1,317 +1,163 @@
-*{
-	list-style:none;
-	padding:0;
-	margin:0;
+h2 {
+    text-align: right!important;
 }
 
-@font-face {
-    font-family: "byekan";
-    src: url('../font/BYekan.eot');
-    src: url('../font/BYekan.woff') format('woff');
-}
-
-body{
-	font-family:"byekan";
-}
-
-nav{
-	height:80px;
-	width:100%;
-    background:#808080;
-}
-
-nav ul{
-	float:right;
-	margin-right:40px;
-}
-
-nav li{
-	display: inline-block;
-	margin: 0 8px;
-	line-height:80px;
-}
-
-nav a{
-    text-decoration:none;
-	color:white;
-	font-size:18px;
-	text-transform:uppercase;
-	border: 1px solid transparent;
-	padding:7px 10px;
-	border-radius: 3px;
-}
-
-.listl {
-    margin-left: 40px;
-    list-style: initial;
-    margin-right: 70px;
-    font-size: 16px;
-    font-family:byekan;	
-}
-
-.list2 {
-    font-size: 18px;
-    font-weight: bold;
-    color:blue;
-    text-align: right;
-    margin-right:30px;
-}
-
-
-.img{
-    margin-top: 5px;
-}
-
-.element-table {
-    max-width: auto;
-    margin-right:20px;
-	margin-left:20px;
-    text-align: justify;
-    font-family: "byekan";
-	margin-top: 10px;
-	margin-bottom: 1px;
-    direction:rtl;
-    display: flex;
-    justify-content: right;
-    flex-wrap: wrap;
-}
-
-.element {
-    max-width: auto;
-    margin-right:20px;
-	margin-left:25px;
-    text-align: justify;
-    font-family: "byekan";
-	margin-top: 1px;
-	margin-bottom: 20px;
-    direction:rtl;
-    display: flex;
-    justify-content: right;
-    flex-wrap: wrap;
-}
-
-.lbl{
-    font-weight: bold;
-    font-size: 28px;
-}
-
-.fnl{
-    font-weight: bold;
-    color: blue;
-    font-size: 20px;
-}
-
-.col .btn{
-    font-family: "byekan";
-    width: 200px;
-    background-color: cornflowerblue;
-    color: white;
-    height: 40px;
-    font-weight: bold;
-    margin-top: 5px;
-    font-size: 18px;
-    cursor: pointer;
-	border: 1px solid transparent;
-    border-radius: 3px;
-    display: inline;
-    margin-left: 15px;
-}
-
-.col .btn:hover{
-    background-color: green;
-}
-
-.col{
-	flex:25%;
-	padding:10px;
-	max-width: 270px;
-	box-sizing:border-box;
-	font-family: "byekan";
-	margin-top: 5px;
-	margin-right: 5px;
-}
-
-.colinf{
-	flex:25%;
-	padding:10px;
-	max-width: 270px;
-	box-sizing:border-box;
-	font-family: "byekan";
-	margin-top: 5px;
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-.colinff{
-	flex:25%;
-	padding:10px;
-	max-width: 270px;
-	box-sizing:border-box;
-	font-family: "byekan";
-	margin-top: 0px;
-    margin-right: 5px;
-    font-weight: bold;
-}
-
-.table{
-    width: 100%;
-    border-collapse: collapse;
-    border-bottom: 2px solid gray;
-    border-top: 2px solid red;
-}
-
- .table .td{
-     text-align: justify;
-     padding-right: 10px;
-     padding-top: 10px;
-     padding-left: 10px;
-     vertical-align: top;
- }
-
- .table .td .alink{
-    color: blue;
-    cursor: pointer;
-    text-decoration: none;
- }
-
-
-nav a.active, nav a:hover{
-	border:1px solid #d11e24;
-	transition: .5s;
-}
-
-.DIGI{
-    font-family: sans-serif;
-    width: 110px;
-    background-color: gray;
-    color: white;
-    height: 40px;
-    font-weight: bold;
-    font-size: 26px;
-    border: 0;
-    margin-top: 20px;
-    margin-left: 5px;
+.course-info {
+    margin-left: 13%    ;
+    margin-top: -4vw ;
+    width: 60%;
+    border-radius: 0.5vw;
     text-align: center;
 }
 
-.btn{
-    font-family: "byekan";
-    width: 130px;
+.back-course-img {
+    margin-bottom: -0.8%;
+    opacity: 0.4;
+    width: 92%;
+}
+
+
+.group-course-img {
+    position: absolute;
+    width: 15%;
+    top: 10%;
+    left: 24%;
+}
+
+.intro-course-teacher {
+    position: absolute;
+    top: 61%;
+    width: 61%;
+    text-align: center;
+}
+
+.course-info-img {
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    border-radius: 0.5vw;
+    text-align: left;
+    margin-right: -1vw;
+    z-index: 1;
+    padding-right: 40%;
     background-color: white;
-    height: 40px;
-    font-weight: bold;
-    font-size: 18px;
-    cursor: pointer;
-	border: 1px solid transparent;
-    border-radius: 3px;
-    display: inline;
-    margin-top: 20px;
-    margin-left: 10px;
 }
 
-nav #icon{
-	float:right;
-	margin-right:20px;
-	margin-top:10px;
-	cursor:pointer;
-	display:none;
+.course-info-img:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 40%;
+    bottom: 0px;
+    z-index: -1;
+    border-top-left-radius: 0.5vw;
+    border-bottom-left-radius: 0.5vw;
+    margin-right: -1vw;
+    padding-right: 45%;
+    background: linear-gradient(45deg , #6e19fb, #7c1fa4);
 }
 
-
-
-.footer{
-	background:#808080;
-	text-align: center;
-	bottom: 0;
-	position: fixed;
-	height:25px;
-	width: 100%;
-	color:#ffff;
-    font-size:12px;
+.course-info-text {
+    position: absolute;
+    top: 10%;
+    width: 37%;
+    text-align: right !important;
+    right: 2%;
 }
 
-.inside{
-    font-weight: bold;
-    font-size: 18px;
+.course-buy-button-section {
+    position: absolute;
+    width: 37%;
+    right: 2%;
+    bottom: 11%;
+    text-align: right;
 }
 
-@media (max-width:1000px){
-	nav ul{
-		margin-right:20px;
-	}
-	nav a{
-		font-size:17px;
-    }
+.buy-btn {
+    padding: 1%;
+    width: 30%;
 }
 
-@media (max-width:1000px) {
+.final-price {
+    position: relative;
+    direction: rtl;
+}
 
-    .col{
-        flex: 33%;
-    }
-    .colinf{
-        flex: 33%;
-    }
+.base-price {
+    position: relative;
+}
 
-    .colinff{
-        flex: 33%;
-    }
+.base-price:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1px solid;
+    border-color: inherit;
+    color: red;
+}
 
-    nav #icon {
-        display: block;
-        margin-top: 20px;
-        margin-right: 5px;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #2f3640;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-
-    nav li {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-
-    nav a {
-        font-size: 20px;
-    }
-
-    a.active, a:hover {
-        border: none;
-        color: #d11e24;
-    }
-
-.show {
-        left: 0;
-    }
+.course-discount-section {
+    display: inline-block;
+    width: 65%;
+    text-align: center;
+    vertical-align: middle;
 }
 
 
+.red-color span {
+    font-size: 1vw;
+}
+
+.course-summary {
+    padding: 3% 0;
+}
 
 
-@media (max-width: 543px) {
-	.footer{ padding-left: 0; 
-    margin-top:10px;}
-    .table, .table tr, .table td, .table tbody{
-        display: block;
-        width: 100%;
-    }
-    .col{
-        flex: 50%;
-    }
-    .colinf{
-        flex: 50%;
-    }
+.course-summary ul li {
+    width: 28%;
+}
 
-    .colinff{
-        flex: 50%;
-    }
+.separator {
+    margin: 0.5vw auto;
+    width: 80%;
+    border: 1px solid #F4F4F4;
+    opacity: 0.6;
+}
+
+.summary-text-section p {
+    margin-top: 3%;
+}
+
+.summary-text-section {
+    text-align: right;
+    padding: 3% 15%;
+}
+
+.course-titles {
+    padding: 3% 14%;
+}
+
+.course-titles span {
+    border-radius: 100%;
+    bottom: 19px;
+    padding: 0.2% 0.9%;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.course-titles label {
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.course-titles>* {
+    margin-bottom: 2%;
 }

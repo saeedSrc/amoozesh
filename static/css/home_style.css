@@ -171,8 +171,14 @@ button:focus {
 .back-course-blue-to-violet {
     background: linear-gradient(45deg ,  #6e19fb, #7c1fa4);
 }
+
 .center {
     text-align: center;
+}
+
+.middle {
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .back-circle-large {

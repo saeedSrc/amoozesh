@@ -161,3 +161,89 @@ h2 {
 .course-titles>* {
     margin-bottom: 2%;
 }
+
+
+/*=======mobile==========*/
+
+@media only screen and (max-width: 780px) {
+
+
+    .course-info {
+        margin : 0;
+        width: 100%;
+    }
+
+
+    .course-info-img, .course-info-img:after {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        text-align: left;
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+    }
+
+    .intro-course-teacher {
+        width: 100%;
+    }
+
+    .back-course-img {
+        margin: initial;
+        opacity: 0.4;
+        width: 100%;
+    }
+    .group-course-img {
+        width: 27%;
+        left: 37%;
+    }
+
+    .course-info-text {
+        position: initial;
+        width: 100%;
+        text-align: right !important;
+    }
+
+    .course-info-text>* {
+        margin : 7%;
+    }
+
+    .course-buy-button-section {
+        position: initial;
+        width: 95%;
+    }
+
+    .course-discount-section {
+        width: 54%;
+    }
+
+    .buy-btn {
+        width: 32%;
+        padding: 1vw 5vw !important;
+    }
+
+    .red-color span {
+        font-size: 3vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .course-summary {
+        padding: 10% 0;
+    }
+
+    .summary-text-section, .course-titles {
+        padding: 3% 4%;
+    }
+
+    .course-titles span {
+        padding: 0.5% 2%;
+        font-size: 3vw;
+    }
+    .header-bottom {
+        display: none;
+    }
+}
+/*=======mobile==========*/

@@ -282,6 +282,10 @@ nav li img {
     display: none;
 }
 
+.desktop {
+    display: block;
+}
+
 .badge {
     background: #43CC8B;
     color: #fff;
@@ -881,6 +885,10 @@ padding: 1vw;
         text-align: center;
     }
 
+    br {
+        display: none;
+    }
+
     .right-nav, .left-nav {
         display: none;
     }
@@ -1069,6 +1077,10 @@ padding: 1vw;
 
     .mobile {
         display: block;
+    }
+
+    .desktop {
+        display: none;
     }
 
     .content-about-us-mobile-img {

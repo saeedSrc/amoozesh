@@ -351,9 +351,7 @@ nav li img {
 }
 
 .btn-new {
-    position: absolute;
-    bottom: 17%;
-    right: 12%;
+   width: 38%;
 }
 
 .btn-popular {
@@ -368,19 +366,23 @@ nav li img {
 
 .element-table-home {
     position: absolute;
-    width: 60%;
+    width: 76%;
     bottom: 0;
     background: #FFFFFF;
     mix-blend-mode: normal;
     border-radius: 4px;
-    padding: 2%;
-    left: 17%;
+    padding: 1%;
+    left: 11%;
 }
 
 .col h3 {
     font-style: normal;
     color: #205F8F;
+    font-weight: 800!important;
+}
 
+.col>* {
+    margin-top: 10%;
 }
 
 .col p {
@@ -394,6 +396,7 @@ nav li img {
     text-align: center;
     position: relative;
     margin: 0 2%;
+    z-index: 1;
 }
 
 .col img {
@@ -402,7 +405,9 @@ nav li img {
 
 .back-circle {
     position: absolute;
-    left: 43%;
+    left: 14%;
+    z-index: -1;
+    opacity: 5.2;
 }
 
 .search-box {
@@ -460,10 +465,6 @@ nav li img {
     width: 2.5%;
 }
 
-.content {
-    background: #E5E5E5;
-}
-
 .content-title {
     color: #205F8F;
     float: right;
@@ -504,18 +505,17 @@ nav li img {
 }
 
 .content-new {
-    padding-top: 5%;
-    padding-bottom: 3%;
-    padding-right: 2%;
-    padding-left: 8%;
+    padding: 5% 0;
 }
 
 .content-new-previews>* {
    display: inline-block;
+    margin: 0 1% !important;
 }
 
 .content-new-previews {
     margin-top: 2%;
+    text-align: center;
 }
 
 .content-new-previews:after {
@@ -524,11 +524,55 @@ nav li img {
     clear: both;
 }
 
+.preview-padding-section {
+    position: absolute;
+    width: 95%;
+    text-align: right;
+    padding: 0 -2%;
+    right: 5%;
+}
+
+.preview-padding-section h2 {
+    text-align: right;
+}
+
+.preview-padding-section span {
+    display: inline-block;
+    width: 55%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.preview-padding-section>* {
+    margin-top: 7%;
+}
+.new-group-course-img {
+    width: 35% !important;
+    position: absolute;
+    top: 7%;
+    left: 33%;
+}
+
+.back-course-img {
+    position: relative;
+    margin-bottom: -1.5%;
+    border-top-right-radius: 2% ;
+    border-top-left-radius: 2% ;
+}
+
+.back-course-border {
+    border-top-right-radius: 2% ;
+    border-top-left-radius: 2%
+}
+
 .preview {
     text-align: center;
     position: relative;
     margin: 0;
-    transition: margin-top 0.3s ease-in-out;
+    top: 0;
+    padding-bottom: 10%;
+    border-radius: 2%;
+    transition: top 0.3s ease-in-out;
     transition-timing-function: ease-in-out;
 }
 
@@ -539,15 +583,6 @@ nav li img {
     color: #FFFFFF;
     transform: translate(-50%, -50%);
     width: 80%;
-}
-
-.preview h2 {
-    position: absolute;
-    width: 80%;
-    right: 12%;
-    top: 55%;
-    color: #000000;
-    text-align: right;
 }
 
 .preview img {
@@ -570,10 +605,10 @@ nav li img {
 }
 
 .new-price {
-    position: absolute;
-    width: 47%;
-    left: 8%;
-    bottom: 17%;
+    /*position: absolute;*/
+    /*width: 47%;*/
+    /*left: 8%;*/
+    /*bottom: 17%;*/
 }
 
 .btn-more-info {
@@ -599,7 +634,7 @@ padding: 1vw;
 .content-most-popular {
     position: relative;
     background: linear-gradient(to right ,  #31c4cb, #330b6b);
-    padding: 2% 5%;
+    padding: 2% 0%;
 
 }
 
@@ -615,8 +650,8 @@ padding: 1vw;
 }
 
 .content-most-popular-right-section {
-    right: 8%;
-    top: 10%;
+   width: 15%;
+    margin-top: 4%;
     text-align: center;
 }
 
@@ -684,7 +719,7 @@ padding: 1vw;
 }
 
 .preview:hover {
-    margin-top: -5px;
+    top: -5px;
 }
 
 .desktop-hide {
@@ -998,7 +1033,7 @@ padding: 1vw;
     }
 
     .col p {
-        width: 60%;
+        width: 100%;
         margin: auto;
 
     }
@@ -1031,7 +1066,8 @@ padding: 1vw;
     }
 
     .preview {
-        width: 50%;
+        width: 48%;
+        padding-bottom: 30%;
     }
 
     .preview span {
@@ -1043,8 +1079,16 @@ padding: 1vw;
     }
 
     .btn-new {
-        padding: 0 2vw !important;
-        bottom: 15%;
+        width: 50%;
+        font-size: 2vw;
+    }
+
+    .preview-padding-section span {
+        width: 40%;
+    }
+
+    .preview h3 {
+        top: 62%;
     }
 
     .content {

@@ -91,11 +91,12 @@ input, textarea {
     padding-right: 3vw;
 }
 
+
 label {
     font-size: 1vw;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline-width: 0;
 }
 
@@ -129,6 +130,14 @@ button:focus {
 }
 
 .gray-color {
+    color: #9A9A9A;
+}
+
+.back-light-gray-color {
+    background: #9A9A9A;
+}
+
+.light-gray-color {
     color: #9A9A9A;
 }
 
@@ -507,7 +516,7 @@ nav li img {
 }
 
 .black-color {
-    color: black;
+    color: #222121;
 }
 
 .content-new {

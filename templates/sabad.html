@@ -29,7 +29,7 @@
 <body>
 <div id="header"></div>
 <div class="shopingcart-content">
-	<div class="shoppingcart back-white-color">
+	<div class="shoppingcart back-white-color1">
 		<div class="title">
 			<h2 class="black-color">تکمیل اطلاعات</h2>
 			<h3 class="light-gray-color"><p class="back-light-blue-color white-color"></p>&nbsp&nbsp خواهشمند است اطلاعات زیر را با دقت وارد نمایید.</h3>
@@ -55,7 +55,7 @@
 			</div>
 			<div class="course-shop">
 				<h2 class="black-color">سبد درس</h2>
-				<table class="table">
+				<table class="table desktop-table">
 					<thead class="light-blue-color">
 					<th>ردیف</th>
 					<th>عنوان آموزش</th>
@@ -77,11 +77,73 @@
 					<!--{%endfor%}-->
 					</tbody>
 				</table>
+				<table class="table mobile-table">
+					<tr>
+						<th class="light-blue-color">ردیف</th>
+						<td> 1</td>
+					</tr>
+					<tr>
+						<th class="light-blue-color">عنوان آموزش</th>
+						<td>برنامه نویسی پایتون</td>
+					</tr>
+					<tr>
+						<th class="light-blue-color">مبلغ (تومان)</th>
+						<td>۱۶۰۰۰۰ تومان</td>
+					</tr>
+
+					<tr>
+						<th class="light-blue-color">وضعیت</th>
+						<td>پرداخت نشده</td>
+					</tr>
+
+					<tr>
+						<th class="light-blue-color">دانلود</th>
+						<td><button class="hazf back-pink-color red-color" onclick="hazf_sabad()">حذف</button></td>
+					</tr>
+
+					<tr>
+						<th class="light-blue-color">حذف</th>
+						<td><button class="dwn back-sky-blue-color light-blue-color" type="submit" onclick="shmessage()">دانلود</button></td>
+					</tr>
+					<!--{%for dt in sefaresh%}-->
+					<!--{%endfor%}-->
+				</table>
+				<table class="table mobile-table">
+					<tr>
+						<th class="light-blue-color">ردیف</th>
+						<td> 1</td>
+					</tr>
+					<tr>
+						<th class="light-blue-color">عنوان آموزش</th>
+						<td>برنامه نویسی پایتون</td>
+					</tr>
+					<tr>
+						<th class="light-blue-color">مبلغ (تومان)</th>
+						<td>۱۶۰۰۰۰ تومان</td>
+					</tr>
+
+					<tr>
+						<th class="light-blue-color">وضعیت</th>
+						<td>پرداخت نشده</td>
+					</tr>
+
+					<tr>
+						<th class="light-blue-color">دانلود</th>
+						<td><button class="hazf back-pink-color red-color" onclick="hazf_sabad()">حذف</button></td>
+					</tr>
+
+					<tr>
+						<th class="light-blue-color">حذف</th>
+						<td><button class="dwn back-sky-blue-color light-blue-color" type="submit" onclick="shmessage()">دانلود</button></td>
+					</tr>
+					<!--{%for dt in sefaresh%}-->
+					<!--{%endfor%}-->
+				</table>
 			</div>
 			<div class="coltxf discount" id="tax">
 				<input type="text" id="tax1" name="tax" class="txf" placeholder="کدتخفیف خود را وارد نمایید">
 				<button type="submit" class="btn" onclick="taxfif()">اعمال کد</button>
-				<h3 class="light-gray-color "><p class="back-light-blue-color white-color"></p>&nbsp&nbsp خواهشمند است در صورت نیاز به پشتیبانی باشماره‌ی ۰۴۱۳۳۱۰۶۱۰ تماس حاصل فرمایید..</h3>
+				<h3 class="light-gray-color "><p class="back-light-blue-color white-color"></p>&nbsp&nbsp خواهشمند است در صورت نیاز به پشتیبانی باشماره‌ی ۰۴۱۳۳۱۰۶۱۰ تماس حاصل فرمایید.</h3>
 			</div>
 			<div class="pay">
 				<h3 class="light-green-color">مجموع مبلغ ۱۲۰۰۰۰ تومان</h3>

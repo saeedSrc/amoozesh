@@ -63,7 +63,7 @@
 }
 
 .shoppingcart input {
-	width: 88%;
+	width: 95%;
 	padding-right: 1%;
 	height: 3vw;
 	border: 1px solid #DFDFDF;
@@ -100,12 +100,14 @@
 .shoppingcart table {
 	font-size: 1vw;
 	text-align: center;
-	width: 100%;
+	width: 80%;
 	background: #F5F8FA;
 	color: black;
 	border: 1px solid #F5F8FA;
 	border-radius: 4px;
+	margin-bottom: 6%;
 }
+
 
 .discount {
 	width: 100%;
@@ -144,5 +146,140 @@
 	clear: both;
 }
 
+.mobile-table {
+	display: none;
+}
+
+.desktop-table {
+	display: inline-table;
+}
+
+
+/*=================mobile==================*/
+
+@media only screen and (max-width: 780px) {
+
+	.mobile-table {
+		display: table;
+	}
+
+	.desktop-table {
+		display: none;
+	}
+
+
+	.shoppingcart ::-webkit-input-placeholder {
+		color: #9A9A9A;
+		font-size: 3vw;
+	}
+
+	.shoppingcart ::-moz-placeholder {
+		color: #9A9A9A;
+		font-size: 3vw;
+	}
+
+	.shoppingcart :-ms-input-placeholder {
+		color: #9A9A9A;
+		font-size: 3vw;
+	}
+
+	.shoppingcart ::placeholder {
+		color: #9A9A9A;
+		font-size: 3vw;
+	}
+
+	.header-bottom {
+		display: none;
+	}
+
+	.shoppingcart {
+		width: 92%;
+		margin: 0;
+		padding: 4%;
+		box-shadow: 0 0;
+	}
+
+	.shoppingcart h2 {
+		font-size: 4vw;
+	}
+
+	.shoppingcart h3 {
+		font-size: 3.5vw;
+	}
+
+	.shoppingcart label {
+		font-size: 4vw;
+	}
+
+	.shoppingcart input {
+		background: white;
+		height: 12vw;
+	}
+
+	.form-group {
+		display: block;
+		width: 100%;
+		margin-bottom: 2%;
+	}
+
+	.general-profile>* {
+		margin-bottom: 6%;
+	}
+
+	.shoppingcart tr {
+		border: 1px solid #F0F0F0;
+		font-size: 3.5vw;
+		text-align: center;
+	}
+
+	.shoppingcart table td,th {
+		padding: 6% 3%;
+		width: 50%;
+		margin: auto;
+
+	}
+
+	.shoppingcart table th {
+		background: white;
+
+	}
+
+	.shoppingcart table  {
+		margin: auto;
+		border-collapse: collapse;
+		margin-bottom: 10%;
+	}
+
+
+	table tr:first-child  {
+		border-top: 0!important;
+	}
+	table tr {
+		border-left: 0!important;
+	}
+	table tr:last-child  {
+		border-bottom: 0!important;
+	}
+	table tr {
+		border-right: 0!important;
+	}
+
+	.discount input {
+		width: 100%;
+	}
+
+	.discount button {
+		height: 12vw;
+		left: 0;
+	}
+
+	.pay {
+		width: 100%;
+	}
+
+}
+
+
+/*================mobile===================*/
 
 

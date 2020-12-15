@@ -145,9 +145,27 @@ button:focus {
     background: #9A9A9A;
 }
 
+.sky-blue-color {
+    color: #6CAEE0;
+}
+
+.back-sky-blue-color {
+    background: #6CAEE0;
+}
+
 .light-blue-color {
     color: #205F8F!important;
 }
+
+.back-pink-color {
+    background: #FFD5D1;
+}
+
+.pink-color {
+    color: #FFD5D1;
+}
+
+
 
 .violet-color {
     color: #3E3E54;
@@ -166,7 +184,7 @@ button:focus {
 }
 
 .back-light-green-color  {
-    color: #43CC8B;
+    background: #19814F !important;
 }
 
 .light-white-color {
@@ -692,7 +710,7 @@ padding: 1vw;
 }
 
 .red-color {
-    color: red;
+    color: #BE3A48;
 }
 
 .footer>* {

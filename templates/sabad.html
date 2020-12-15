@@ -1,129 +1,96 @@
-{%load static%}
+<!--{%load static%}-->
 <!DOCTYPE html>
 <html dir="ltr">
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="{% static 'css/sabad.css' %}">
-	<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
-	<script src="{% static 'js/digitat_sabad.js' %}"> </script>
+	<!--<link rel="stylesheet" href="{% static 'css/sabad.css' %}">-->
+	<!--<script src="{% static 'js/jquery-3.4.1.js' %}"></script>-->
+	<!--<script src="{% static 'js/digitat_sabad.js' %}"> </script>-->
+	<link rel="stylesheet" href="../static/css/sabad.css">
+	<script src="../static/js/jquery-3.4.1.js"></script>
+	<script>
+        $(document).ready(function(){
+            $('#header').load('header.html', function() {
+                $(".banner").attr('src', '../static/img/about-banner.jpg');
+                $("#form1").css('display', 'none');
+                var mainTitle = '<h1>سبد درس</h1>';
+                $(".main-title").html(mainTitle).css('top', '30%');
+                $(".container").css('height', '25vw');
+                $(".container").css('z-index', '-1');
+
+            });
+            $("#footer").load("footer.html");
+        });
+	</script>
 </head>
 
 <body>
-	<nav>
-		<label id="logo"> <img src="{% static 'img/Dig.png' %}" class="logo"> </label>
-		<ul>
-			<li><a href="/contact">تماس با ما</a></li>
-			<li><a href="/about">درباره ما</a></li>
-			<li><a href="/SMP">ثبت نام</a></li>
-			<li><a href="/">خانه</a></li>
-		</ul>
-		<label id="icon"> <img src="{% static 'img/menu.png' %}" class=""> </i> </label>
-	</nav>
-
-	<form id="form1">{%csrf_token%}
-		<div class="element-table-home4">
-			<div class="search-box">
-				<input type="text" id="sear" name="sear" class="search" placeholder="جستجو درس های بیشتر ..." />
-				<button type="submit" class="search-btn" onclick="search()">جستجو</button>
-			</div>
+<div id="header"></div>
+<div class="shopingcart-content">
+	<div class="shoppingcart back-white-color">
+		<div class="title">
+			<h2 class="black-color">تکمیل اطلاعات</h2>
+			<h3 class="light-gray-color"><p class="back-light-blue-color white-color"></p>&nbsp&nbsp خواهشمند است اطلاعات زیر را با دقت وارد نمایید.</h3>
 		</div>
-	</form>
-
-	<ul class="ultxt">
-		<li class="list2">
-			توجه !
-		</li>
-		<li class="listl">
-			<span class="spn"> خواهشمند است در صورت نیاز به پشتیبانی با شماره 04133104610 تماس حاصل فرمائید.<span>
-		</li>
-
-		<li class="listl">
-			<span class="spn">سفارش دهنده محترم با پر کدن فیلدهای زیر تعهد می نماید که حق کپی رایت را رعایت می
-				کند</span>
-		</li>
-	</ul>
-
-	<form id="form7"> {%csrf_token%}
-		<div class="element-table">
-			<div class="col">
-				<input type="text" id="nam" name="nam" class="txtstyle" value="{{nam}}"
-					placeholder="نام و نام خانوادگی">
+		<form action="">
+			<div class="general-profile">
+				<div class="form-group">
+					<label  class="violet-color" for="nam">نام</label>
+					<input  class="txtstyle back-white-color gray-color" type="text" id="nam" name="nam" placeholder="نام">
+				</div>
+				<div class="form-group">
+					<label class="violet-color" for="namk">نام  خانوادگی</label>
+					<input class="txtstyle back-white-color gray-color"type="text" id="namk" name="namk"  placeholder="نام خانوادگی">
+				</div>
+				<div class="form-group">
+					<label  class="violet-color" for="tel">تلفن همراه</label>
+					<input  class="txtstyle back-white-color gray-color" type="number" id="tel" name="tel" placeholder="شماره موبایل">
+				</div>
+				<div class="form-group">
+					<label class="violet-color" for="ema">آدرس ایمیل</label>
+					<input  class="txtstyle back-white-color gray-color" type="email" id="ema" name="ema" placeholder=" ایمیل">
+				</div>
 			</div>
-			<div class="col">
-				<input type="number" id="tel" name="tel" class="txtstyle" value="{{tel}}" placeholder="تلفن همراه">
-			</div>
-			<div class="col">
-				<input type="text" id="ema" name="ema" class="txtstyle" value="{{ema}}" placeholder="ایمیل">
-			</div>
-		</div>
-
-		<div class="element-table">
-			<table class="table">
-				<thead>
+			<div class="course-shop">
+				<h2 class="black-color">سبد درس</h2>
+				<table class="table">
+					<thead class="light-blue-color">
 					<th>ردیف</th>
 					<th>عنوان آموزش</th>
-					<th>وضعیت</th>
 					<th>مبلغ (تومان)</th>
-					<th>حذف</th>
+					<th>وضعیت</th>
 					<th>دانلود</th>
-				</thead>
-				<tbody>
-					{%for dt in sefaresh%}
+					<th>حذف</th>
+					</thead>
+					<tbody>
+					<!--{%for dt in sefaresh%}-->
 					<tr>
-						<td data-label="ردیف">{{forloop.counter}}</td>
-						<td data-label="عنوان">{{dt.1}}</td>
-						<td data-label="وضعیت">پرداخت نشده</td>
-						<td data-label="مبلغ (تومان)">{{dt.2}}</td>
-						<td><button class="hazf" onclick="hazf_sabad({{dt.0}})">حذف</button></td>
-						<td><button class="dwn" type="submit" onclick="shmessage()">دانلود</button></td>
+						<td> 1</td>
+						<td>برنامه نویسی پایتون</td>
+						<td>۱۶۰۰۰۰ تومان</td>
+						<td>پرداخت نشده</td>
+						<td><button class="hazf back-pink-color red-color" onclick="hazf_sabad()">حذف</button></td>
+						<td><button class="dwn back-sky-blue-color light-blue-color" type="submit" onclick="shmessage()">دانلود</button></td>
 					</tr>
-					{%endfor%}
-					<tr>
-						<td><strong>مجموع: {{majmo}} تومان</strong></td>
-					</tr>
-				</tbody>
-			</table>
+					<!--{%endfor%}-->
+					</tbody>
+				</table>
+			</div>
+			<div class="coltxf discount" id="tax">
+				<input type="text" id="tax1" name="tax" class="txf" placeholder="کدتخفیف خود را وارد نمایید">
+				<button type="submit" class="btn" onclick="taxfif()">اعمال کد</button>
+				<h3 class="light-gray-color "><p class="back-light-blue-color white-color"></p>&nbsp&nbsp خواهشمند است در صورت نیاز به پشتیبانی باشماره‌ی ۰۴۱۳۳۱۰۶۱۰ تماس حاصل فرمایید..</h3>
+			</div>
+			<div class="pay">
+				<h3 class="light-green-color">مجموع مبلغ ۱۲۰۰۰۰ تومان</h3>
+				<button type="submit" class="btn back-light-green-color" onclick="sbm()">پرداخت</button>
+			</div>
+		</form>
+	</div>
+</div>
 
-			<div class="coltxf">
-				<button type="submit" id="st" class="btn" onclick="shtxf()">کد تخفیف اختصاصی</button>
-			</div>
-
-			{%if stl == "1" %}
-			<div class="coltxf" id="tax" style="display: none;">
-				<input type="text" id="tax1" name="tax" class="txf" placeholder="کد تخفیف">
-			</div>
-			<div class="coltxf" id="tb" style="display: none;">
-				<button type="submit" class="btn" onclick="taxfif()">اعمال
-					کد</button>
-			</div>
-			<div class="coltxf" id="erm" style="display: none;">
-				<label class="err">{{er}}</label>
-			</div>
-			{%endif%}
-			{%if stl == "0" %}
-			<div class="coltxf" id="tax">
-				<input type="text" id="tax1" name="tax" class="txf" placeholder="کد تخفیف">
-			</div>
-			<div class="coltxf" id="tb">
-				<button type="submit" class="btn" onclick="taxfif()">اعمال
-					کد</button>
-			</div>
-			<div class="coltxf" id="erm">
-				<label class="err">{{er}}</label>
-			</div>
-			{%endif%}
-		</div>
-		<div class="tbl-btn">
-			<div class="colbtn">
-				<button type="submit" class="btn" onclick="sbm()">پرداخت</button>
-			</div>
-		</div>
-	</form>
-
-	<footer class="footer">
-		<div style="text-align:center">کلیه حقوق مادی و معنوی این محصول متعلق به شرکت دیجیتال تراکنش تبریز می باشد</div>
-	</footer>
-
+<div id="footer"></div>
+</body>
 </html>

@@ -277,6 +277,11 @@
 		width: 100%;
 	}
 
+	.pay button {
+		width: 62%;
+		height: 8vw;
+	}
+
 }
 
 

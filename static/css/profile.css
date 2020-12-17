@@ -94,8 +94,7 @@ input[type=number] {
     border-radius: 8px;
     cursor: pointer;
     padding-top: 2%;
-    margin-top: 12%;
-    margin-right: 3%;
+    margin: 12% 2%;
 }
 
 .profile-terms div {
@@ -119,6 +118,7 @@ input[type=number] {
 
 .profile {
     position: relative;
+    direction: rtl;
     box-shadow: 0px 4px 23px rgba(218, 218, 218, 0.84);
     display: flex;
     width: 85%;
@@ -138,6 +138,14 @@ input[type=number] {
  display: none;
 }
 
+.test {
+    display: block;
+}
+
+.evaluation {
+    display: none;
+}
+
 .test-header nav ul li  {
     margin: 0 !important;
     width: 24%;
@@ -147,8 +155,18 @@ input[type=number] {
     padding: 2% 0;
 }
 
+.evaluation-header {
+    padding: 2% 0;
+}
+
+.evaluation-header nav ul li {
+    margin: 0 ;
+    width: 45%;
+}
+
 .get-question {
     position: relative;
+    margin: 3% 0 ;
 }
 
 .get-question input {
@@ -161,7 +179,7 @@ input[type=number] {
 }
 
 .get-question .plus {
-    right: 46.5%;
+    right: 50.5%;
     position: absolute;
     top: 10%;
     font-size: 1.5vw;
@@ -170,9 +188,158 @@ input[type=number] {
 
 .get-question .minus {
     position: absolute;
-    right: 53%;
+    right: 57%;
     top: 10%;
     font-size: 1.5vw;
     cursor: pointer;
 }
+
+.get-question h3 {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.question p {
+    text-align: right;
+    width: 80%;
+    margin: auto;
+}
+
+.question nav ul li {
+    margin: 1%;
+    width: 40%;
+    vertical-align: middle;
+}
+
+.question>* {
+    margin-bottom: 3%;
+}
+
+.question-flow button {
+    box-shadow: 0 0 !important;
+    border: 1px solid #ECECEC;
+    margin: 1%;
+}
+
+
+.evaluation-table table thead {
+    background: white;
+    border: 0;
+}
+
+.evaluation-table table td,th {
+    padding: 1%;
+}
+
+.evaluation-table table {
+    direction: rtl;
+    font-size: 1vw;
+    text-align: center;
+    width: 97%;
+    background: #F5F8FA;
+    color: black;
+    border: 1px solid #F5F8FA;
+    border-radius: 4px;
+    margin-bottom: 6%;
+    margin-top: 2%;
+}
+
+
+.desktop-table {
+    display: inline-table;
+}
+
+
+
+/*=================mobile==================*/
+
+@media only screen and (max-width: 780px) {
+
+    .header-bottom {
+        display: none;
+    }
+    .profile {
+        width: 100%;
+        box-shadow:  0 0 ;
+        display: initial;
+    }
+
+    .profile-right-section {
+        width: 100%;
+        box-shadow: 0 0 ;
+    }
+
+    .profile-left-section {
+        width: 100%;
+        box-shadow: 0 0 ;
+    }
+
+    .profile-right-section img:first-child {
+        width: 26%;
+    }
+
+    .profile-right-section h2 {
+        font-size: 4vw;
+    }
+
+    .profile-right-section h3 {
+        font-size: 3.5vw;
+    }
+
+    .profile-right-section button {
+        display: none;
+    }
+
+    .profile-right-section img:last-child {
+     display: none;
+    }
+
+    .profile-header {
+        box-shadow:  0 0 !important;
+
+    }
+
+    .profile-header nav ul li:last-of-type {
+        display: none;
+    }
+
+    .profile-header nav ul li:first-of-type {
+        text-align: center;
+    }
+
+
+    .profile-header nav ul li {
+        width: 100%;
+        margin: 2%;
+    }
+
+    .profile-header nav ul li a {
+        font-size: 3.5vw;
+    }
+
+    .profile-terms {
+        width: 40%;
+        margin: 3%;
+        padding-top: 7%;
+    }
+
+    .profile-terms h3 {
+        font-size: 3.5vw;
+    }
+
+    .test-header nav ul li a {
+        font-size: 4vw;
+    }
+
+    .test-header nav ul li:nth-child(2) {
+        display: none;
+    }
+
+    .test-header nav ul li {
+        width: 30%;
+    }
+}
+
+
+/*=============mobile=============*/
 

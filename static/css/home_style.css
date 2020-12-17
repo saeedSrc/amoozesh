@@ -125,7 +125,7 @@ button:focus {
 }
 
 .back-white-color3 {
-    background: #fefefe;
+    background: #fefefe !important;
 }
 .white-color {
     color: #ffffff;
@@ -246,7 +246,7 @@ button:focus {
 }
 
 .left-text {
-    text-align: right;
+    text-align: left;
 }
 
 .full-width {
@@ -873,10 +873,10 @@ padding: 1vw;
     .header-nav .menu-icon .navicon {
         background: #dddddd;
         display: block;
-        height: 2px;
+        height: 2.5px;
         position: relative;
         transition: background .2s ease-out;
-        width: 18px;
+        width: 32px;
     }
 
     .header-nav .menu-icon .navicon:before,
@@ -891,11 +891,11 @@ padding: 1vw;
     }
 
     .header-nav .menu-icon .navicon:before {
-        top: 5px;
+        top: 12px;
     }
 
     .header-nav .menu-icon .navicon:after {
-        top: -5px;
+        top: 6px;
     }
 
     /* menu btn */
@@ -1043,7 +1043,8 @@ padding: 1vw;
     }
 
     .header-middle {
-        padding: 5vw 1vw;
+        /*padding: 5vw 1vw;*/
+        padding: 2%;
     }
 
     .btn-search {

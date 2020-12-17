@@ -120,6 +120,13 @@ button:focus {
     background: #F4F4F4;
 }
 
+.white-color3 {
+    color: #fefefe;
+}
+
+.back-white-color3 {
+    background: #fefefe;
+}
 .white-color {
     color: #ffffff;
 }
@@ -150,11 +157,27 @@ button:focus {
 }
 
 .back-sky-blue-color {
-    background: #6CAEE0;
+    background: #6CAEE0!important;
 }
 
 .light-blue-color {
     color: #205F8F!important;
+}
+
+.white-blue-color {
+    color: #d5e7f5;
+}
+
+.back-white-blue-color {
+    background: #d5e7f5 !important;
+}
+
+.white-blue-color1{
+    color: #F1F6FF;
+}
+
+.back-white-blue-color1 {
+    background: #F1F6FF !important;
 }
 
 .back-pink-color {
@@ -287,6 +310,8 @@ nav li a {
     position: relative;
     font-weight: bold;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align:middle;
 }
 
 nav li a.active {
@@ -309,6 +334,7 @@ nav li a:hover {
 
 nav li img {
     margin-left: 8px;
+    vertical-align: middle;
 }
 
 .mobile {
@@ -324,7 +350,7 @@ nav li img {
     color: #fff;
     border-radius: 100%;
     position: absolute;
-    bottom: 19px;
+    bottom: 10px;
     right: -17px;
     padding: 2% 5%;
     width: 14%;

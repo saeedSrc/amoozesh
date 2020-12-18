@@ -76,6 +76,7 @@ input[type=number] {
 }
 
 .profile-right-section button {
+    direction: ltr;
     width: 50%;
     font-size: 0.8vw;
 }
@@ -189,7 +190,7 @@ input[type=number] {
 }
 
 .question p {
-    text-align: right;
+    text-align: center;
     width: 80%;
     margin: auto;
 }

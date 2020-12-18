@@ -1,10 +1,10 @@
 
-.test nav ul li:first-of-type {
+.test-header nav ul li:first-of-type {
     text-align: right;
 }
 
 
-.test nav ul li:last-of-type {
+.test-header nav ul li:last-of-type {
     text-align: left;
 }
 

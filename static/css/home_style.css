@@ -25,6 +25,32 @@
     font-size: 1vw;
 }
 
+
+input[type=text] {
+    /* Remove First */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
+input[type=number] {
+    /* Remove First */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
+input[type=email] {
+    /* Remove First */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
+
 body {
     font-family: iranyekan, serif ;
 }

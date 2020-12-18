@@ -8,8 +8,12 @@ form>* {
 
 .contact-content label {
     display: inline-block;
-    width: 100%;
+    width: 78%;
     text-align: right;
+}
+
+.last-label {
+    width: 60%!important;
 }
 
 form .btn {
@@ -48,7 +52,7 @@ form .btn {
     box-sizing: border-box;
     border-radius: 0.3vw;
     height: 2.5vw;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .contact-form form textarea {
@@ -133,5 +137,14 @@ form .btn {
 
     .contact-form div:last-of-type {
         width: 100%;
+    }
+
+    .contact-content label {
+        width: 97%;
+
+    }
+
+    .last-label {
+        width: 97%!important;
     }
 }

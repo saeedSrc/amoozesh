@@ -50,6 +50,28 @@ input[type=email] {
     outline: none !important;
 }
 
+input[type=password] {
+    /* Remove First */
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
+select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
+textarea {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    outline: none !important;
+}
+
 
 body {
     font-family: iranyekan, serif ;

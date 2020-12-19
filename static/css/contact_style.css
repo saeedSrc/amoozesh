@@ -2,6 +2,10 @@ form {
     text-align: center;
 }
 
+h1 {
+    font-size: 2.5vw!important;
+}
+
 form>* {
     display: inline-block;
 }

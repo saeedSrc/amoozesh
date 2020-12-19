@@ -493,6 +493,14 @@ nav li img {
     font-weight: 800!important;
 }
 
+.col h3 a {
+    font-style: normal;
+    color: #205F8F;
+    font-weight: 800!important;
+}
+
+
+
 .col>* {
     margin-top: 10%;
 }
@@ -509,6 +517,7 @@ nav li img {
     position: relative;
     margin: 0 2%;
     z-index: 1;
+    cursor: pointer;
 }
 
 .col img {
@@ -686,6 +695,11 @@ nav li img {
     border-radius: 2%;
     transition: top 0.3s ease-in-out;
     transition-timing-function: ease-in-out;
+    box-shadow: 0px 4px 24px #F4F4F4;
+}
+
+.content-most-popular .preview {
+    box-shadow: 0px 0px;
 }
 
 .preview h3 {
@@ -732,7 +746,7 @@ nav li img {
 }
 
 .content-about-us-img {
-    width: 50%;
+    width: 40%;
     display: inline-block;
     vertical-align: middle;
     text-align: center;
@@ -743,7 +757,7 @@ nav li img {
 }
 
 .content-about-us-box {
-    width: 44%;
+    width: 52%;
     text-align: right;
     display: inline-block;
     vertical-align: middle;
@@ -1178,6 +1192,12 @@ nav li img {
         font-weight: 800 !important;
     }
 
+    .col h3 a {
+        margin-top: 5%;
+        font-weight: 800 !important;
+        font-size: 3vw;
+    }
+
     .col p {
         width: 100%;
         margin: auto;
@@ -1191,6 +1211,7 @@ nav li img {
 
     .content-new-previews>* {
         float: right;
+        margin-bottom: 6%!important;
     }
 
     .content-new {

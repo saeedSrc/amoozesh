@@ -7,6 +7,19 @@
 	display: inline-table;
 }
 
+table button:hover {
+	background: linear-gradient(261.44deg, #205F8F -29.09%, rgba(83, 174, 243, 0.72) 102.54%)!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44)!important;
+	color: white!important;
+}
+
+table button:focus  {
+	background: #5887AB!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44) !important;
+	border-radius: 4px!important;
+	color: white!important;
+}
+
 /*=================mobile==================*/
 
 @media only screen and (max-width: 780px) {

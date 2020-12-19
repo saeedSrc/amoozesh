@@ -102,6 +102,14 @@ h1 {
     margin-top: 20% !important;
 }
 
+.btn-teacher-preview:hover {
+    background: linear-gradient(84.98deg, #D5E7F5 4.93%, rgba(0, 144, 255, 0.58) 100%)!important;
+}
+
+.btn-teacher-preview:focus {
+    background: linear-gradient(84.98deg, #D5E7F5 4.93%, rgba(0, 144, 255, 0.58) 100%)!important;
+}
+
 .teacher-name-title h3{
     direction: ltr;
 }

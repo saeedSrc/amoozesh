@@ -9,6 +9,14 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.back-white-blue-color:hover {
+    background: linear-gradient(84.98deg, #D5E7F5 4.93%, rgba(0, 144, 255, 0.58) 100%)!important;
+}
+
+.back-white-blue-color:focus {
+    background: linear-gradient(84.98deg, #D5E7F5 4.93%, rgba(0, 144, 255, 0.58) 100%)!important;
+}
+
 .profile-content {
     padding-bottom: 10%;
 }
@@ -88,6 +96,7 @@ input[type=number] {
 }
 
 .profile-terms {
+    position: relative;
     width: 15%;
     display: inline-block;
     background: white;
@@ -96,7 +105,16 @@ input[type=number] {
     cursor: pointer;
     padding-top: 2%;
     margin: 12% 2%;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+    transition-timing-function: ease-in-out;
 }
+
+.profile-terms:hover {
+    top: -5px;
+}
+
+
 
 .profile-terms div {
     border-bottom-right-radius:8px ;

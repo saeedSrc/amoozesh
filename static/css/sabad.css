@@ -112,6 +112,56 @@ h1 {
 	margin-bottom: 6%;
 }
 
+.discount-btn:hover {
+	background: linear-gradient(261.44deg, #205F8F -29.09%, rgba(83, 174, 243, 0.72) 102.54%)!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44)!important;
+}
+
+.discount-btn:focus  {
+	background: #5887AB!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44) !important;
+	border-radius: 4px!important;
+}
+
+
+
+.dwn:hover {
+	background: linear-gradient(261.44deg, #205F8F -29.09%, rgba(83, 174, 243, 0.72) 102.54%)!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44)!important;
+	color: white!important;
+}
+
+.dwn:focus  {
+	background: #5887AB!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44) !important;
+	border-radius: 4px!important;
+	color: white!important;
+}
+
+.hazf:hover {
+	background: linear-gradient(261.44deg, #BE3A48 -29.09%, #FFD5D1 102.54%)!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44)!important;
+	color: white!important;
+}
+
+.hazf:focus  {
+	background: #FFD5D1!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44) !important;
+	border-radius: 4px!important;
+	color: white!important;
+}
+
+.pay-btn:hover {
+	background: linear-gradient(261.44deg, #2de78e -29.09%, #068112 102.54%)!important;
+	box-shadow: 0px 4px 6px rgba(196, 196, 196, 0.44)!important;
+	color: white!important;
+
+}
+
+.pay-btn:focus {
+	background: #068112 !important;
+}
+
 
 .discount {
 	width: 100%;

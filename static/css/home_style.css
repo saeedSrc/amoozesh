@@ -722,20 +722,26 @@ nav li img {
   margin-top: 5%;
     background: #D5E7F5;
     color: #205F8F;
-padding: 1vw;
+     padding: 1vw;
 
 }
 
-.content-about-us-box {
-    position: absolute;
-    top: 20%;
-    right: 1%;
-    width: 52%;
-    text-align: right;
-    height: 50%;
-    overflow: auto;
-    padding: 2%;
+.content-about-us-img {
+    width: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
 
+.content-about-us-img img {
+    width: 50%;
+}
+
+.content-about-us-box {
+    width: 44%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .content-most-popular {
@@ -1239,11 +1245,6 @@ padding: 1vw;
         position: initial;
     }
 
-
-    .content-about-us-img {
-        display: none;
-    }
-
     .content-about-us-box {
         position: initial;
         width: 100%;
@@ -1252,6 +1253,10 @@ padding: 1vw;
         height: initial;
         text-align: center;
         margin: auto;
+    }
+
+    .content-about-us-img {
+        display: none;
     }
 
     .mobile {

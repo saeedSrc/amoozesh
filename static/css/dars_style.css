@@ -181,13 +181,10 @@ h1 {
 /*=======mobile==========*/
 
 @media only screen and (max-width: 780px) {
-
-
     .course-info {
         margin : 0;
         width: 100%;
     }
-
 
     .course-info-img, .course-info-img:after {
         position: relative;
@@ -208,6 +205,7 @@ h1 {
         opacity: 0.4;
         width: 100%;
     }
+
     .group-course-img {
         width: 27%;
         left: 37%;
@@ -241,7 +239,7 @@ h1 {
         font-size: 3vw;
     }
 
-    nav {
+    .course-summary nav {
         display: none;
     }
 
